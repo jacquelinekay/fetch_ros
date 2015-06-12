@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="fetch_robotiq_hands">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="fetch_robotiq_hand">
   <xacro:include filename="$(find fetch_description)/robots/macros.xacro"/>
   <xacro:include filename="$(find fetch_description)/robots/robotiq_hand.urdf.xacro"/>
 
