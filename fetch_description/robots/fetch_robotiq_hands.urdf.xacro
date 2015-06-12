@@ -3,8 +3,10 @@
   <xacro:include filename="$(find fetch_description)/robots/robotiq_hand.urdf.xacro"/>
 
   <xacro:freight_macro velocity_limit="17.4" />
-  <xacro:fetch gripper_link_name="palm"/>
-  <xacro:robotiq_hand prefix="" parent="wrist_roll_link" reflect="1">
-    <origin xyz="-0.09 -0.0001 -0.0017" rpy="0 0 0"/>
+  <xacro:fetch gripper_link_name="fake_robotiq_link"/>
+  <link name="fake_robotiq_link">
+  </link>
+  <xacro:robotiq_hand prefix="" parent="fake_robotiq_link" reflect="1">
+    <origin xyz="-0.09 -0.0001 -0.0017" rpy="-1.57079 0 0"/>
   </xacro:robotiq_hand>
 </robot>

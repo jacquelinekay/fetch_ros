@@ -16,7 +16,7 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_0.STL" />
+          <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_0.STL" />
         </geometry>
         <material name="green">
           <color rgba="0 1 0 1"/>
@@ -25,7 +25,7 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_0.STL" />
+          <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_0.STL" />
         </geometry>
         <material name="yellow">
           <color rgba="0 1 1 1"/>
@@ -48,14 +48,14 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <visual>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_1.STL" />
+          <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_1.STL" />
         </geometry>
         <material name="green"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_1.STL"/>
+          <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_1.STL"/>
         </geometry>
         <material name="yellow">
           <color rgba="0 1 1 1"/>
@@ -84,14 +84,14 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <visual>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_2.STL" />
+          <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_2.STL" />
         </geometry>
         <material name="green"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
           <geometry>
-            <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_2.STL"/>
+            <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_2.STL"/>
           </geometry>
         <material name="yellow"/>
       </collision>
@@ -118,14 +118,14 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_3.STL" />
+          <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_3.STL" />
         </geometry>
         <material name="green"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_3.STL"/>
+          <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_3.STL"/>
         </geometry>
         <material name="yellow"/>
       </collision>
@@ -608,7 +608,6 @@ there are multiple hands then a prefix followed by an "_" is needed.
             <friction>0</friction>
           </dynamics>
           <xyz>0 0 1</xyz>
-          <use_parent_model_frame>false</use_parent_model_frame>
         </axis>
       </joint>
     </gazebo>
@@ -627,7 +626,6 @@ there are multiple hands then a prefix followed by an "_" is needed.
             <friction>0</friction>
           </dynamics>
           <xyz>0 0 1</xyz>
-          <use_parent_model_frame>false</use_parent_model_frame>
         </axis>
       </joint>
     </gazebo>
@@ -646,7 +644,6 @@ there are multiple hands then a prefix followed by an "_" is needed.
             <friction>0</friction>
           </dynamics>
           <xyz>0 0 1</xyz>
-          <use_parent_model_frame>false</use_parent_model_frame>
         </axis>
       </joint>
     </gazebo>
@@ -665,7 +662,6 @@ there are multiple hands then a prefix followed by an "_" is needed.
             <friction>0</friction>
           </dynamics>
           <xyz>0 0 1</xyz>
-          <use_parent_model_frame>false</use_parent_model_frame>
         </axis>
       </joint>
     </gazebo>
@@ -684,7 +680,6 @@ there are multiple hands then a prefix followed by an "_" is needed.
             <friction>0</friction>
           </dynamics>
           <xyz>0 0 1</xyz>
-          <use_parent_model_frame>false</use_parent_model_frame>
         </axis>
       </joint>
     </gazebo>
@@ -715,7 +710,7 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <link name="${prefix}palm">
         <visual>
           <geometry>
-            <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/palm.STL" />
+            <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/palm.STL" />
           </geometry>
           <material name="green">
             <color rgba="0 1 0 1"/>
@@ -724,7 +719,7 @@ there are multiple hands then a prefix followed by an "_" is needed.
         <!-- Mesh collision -->
         <!-- <collision>
           <geometry>
-            <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/palm.STL"/>
+            <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/palm.STL"/>
           </geometry>
           <material name="yellow">
             <color rgba="0 1 1 1"/>

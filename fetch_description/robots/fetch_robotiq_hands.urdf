@@ -434,7 +434,7 @@
   <joint name="gripper_axis" type="fixed">
     <origin rpy="0 0 0" xyz="0.16645 0 0"/>
     <parent link="wrist_roll_link"/>
-    <child link="palm"/>
+    <child link="fake_robotiq_link"/>
     <axis xyz="0 1 0"/>
   </joint>
   <link name="bellows_link">
@@ -551,10 +551,12 @@
     <parent link="head_camera_depth_frame"/>
     <child link="head_camera_depth_optical_frame"/>
   </joint>
+  <link name="fake_robotiq_link">
+  </link>
   <!-- joint attaching parent link to robotiq hand -->
   <joint name="robotiq_hand_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.09 -0.0001 -0.0017"/>
-    <parent link="wrist_roll_link"/>
+    <origin rpy="-1.57079 0 0" xyz="-0.09 -0.0001 -0.0017"/>
+    <parent link="fake_robotiq_link"/>
     <child link="palm"/>
   </joint>
   <!-- Insert the fingers -->
@@ -564,7 +566,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_0.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_0.STL"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -573,7 +575,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_0.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_0.STL"/>
       </geometry>
       <material name="yellow">
         <color rgba="0 1 1 1"/>
@@ -594,14 +596,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_1.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_1.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_1.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_1.STL"/>
       </geometry>
       <material name="yellow">
         <color rgba="0 1 1 1"/>
@@ -623,14 +625,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_2.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_2.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_2.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_2.STL"/>
       </geometry>
       <material name="yellow"/>
     </collision>
@@ -650,14 +652,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_3.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_3.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_3.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_3.STL"/>
       </geometry>
       <material name="yellow"/>
     </collision>
@@ -1045,7 +1047,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1063,7 +1064,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1081,7 +1081,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1099,7 +1098,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1117,7 +1115,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1134,7 +1131,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_0.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_0.STL"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1143,7 +1140,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_0.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_0.STL"/>
       </geometry>
       <material name="yellow">
         <color rgba="0 1 1 1"/>
@@ -1164,14 +1161,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_1.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_1.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_1.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_1.STL"/>
       </geometry>
       <material name="yellow">
         <color rgba="0 1 1 1"/>
@@ -1193,14 +1190,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_2.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_2.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_2.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_2.STL"/>
       </geometry>
       <material name="yellow"/>
     </collision>
@@ -1220,14 +1217,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_3.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_3.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_3.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_3.STL"/>
       </geometry>
       <material name="yellow"/>
     </collision>
@@ -1615,7 +1612,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1633,7 +1629,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1651,7 +1646,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1669,7 +1663,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1687,7 +1680,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -1704,7 +1696,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_0.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_0.STL"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1713,7 +1705,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_0.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_0.STL"/>
       </geometry>
       <material name="yellow">
         <color rgba="0 1 1 1"/>
@@ -1734,14 +1726,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_1.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_1.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_1.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_1.STL"/>
       </geometry>
       <material name="yellow">
         <color rgba="0 1 1 1"/>
@@ -1763,14 +1755,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_2.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_2.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_2.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_2.STL"/>
       </geometry>
       <material name="yellow"/>
     </collision>
@@ -1790,14 +1782,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_3.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/link_3.STL"/>
       </geometry>
       <material name="green"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_3.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/link_3.STL"/>
       </geometry>
       <material name="yellow"/>
     </collision>
@@ -2185,7 +2177,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -2203,7 +2194,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -2221,7 +2211,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -2239,7 +2228,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -2257,7 +2245,6 @@
           <friction>0</friction>
         </dynamics>
         <xyz>0 0 1</xyz>
-        <use_parent_model_frame>false</use_parent_model_frame>
       </axis>
     </joint>
   </gazebo>
@@ -2273,7 +2260,7 @@
   <link name="palm">
     <visual>
       <geometry>
-        <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/palm.STL"/>
+        <mesh filename="package://fetch_description/meshes/s-model_articulated/visual/palm.STL"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -2282,7 +2269,7 @@
     <!-- Mesh collision -->
     <!-- <collision>
           <geometry>
-            <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/palm.STL"/>
+            <mesh filename="package://fetch_description/meshes/s-model_articulated/collision/palm.STL"/>
           </geometry>
           <material name="yellow">
             <color rgba="0 1 1 1"/>
