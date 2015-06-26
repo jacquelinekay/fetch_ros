@@ -2,6 +2,22 @@
 Changelog for package fetch_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.0 (2015-06-23)
+------------------
+
+0.5.14 (2015-06-19)
+-------------------
+* fetch_navigation depends fetch_depth_layer
+* Contributors: Michael Ferguson
+
+0.5.13 (2015-06-13)
+-------------------
+
+0.5.12 (2015-06-12)
+-------------------
+* Slam_karto node rename in launch
+* Contributors: Aaron Blasdel
+
 0.5.11 (2015-06-10)
 -------------------
 

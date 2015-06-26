@@ -1,9 +1,11 @@
 <launch>
 
   <!-- Set the param that trajectory_execution_manager needs to find the controller plugin -->
+  <arg name="gripper_suffix" value=""/>
+
   <param name="moveit_controller_manager" value="moveit_simple_controller_manager/MoveItSimpleControllerManager"/>
 
   <!-- The rest of the params are specific to this plugin -->
-  <rosparam file="$(find fetch_moveit_config)/config/controllers.yaml"/>
+  <rosparam file="$(find fetch_moveit_config)/config/controllers$(arg gripper_suffix).yaml"/>
 
 </launch>
